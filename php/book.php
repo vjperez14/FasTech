@@ -41,7 +41,7 @@
     function getId(){
         $ids = 0;
         if(isset($_SESSION['email'])){
-            $link=mysqli_connect("localhost","debian-sys-maint", "l6pdxQO6O3wIFWZs") or die(mysqli_error($link));
+            $link=mysqli_connect("localhost","root", "") or die(mysqli_error($link));
             mysqli_select_db($link, "fastech") or die(mysqli_error($link));
             $res=mysqli_query($link, "select id from registered_accounts 
             where email = '" .$_SESSION['email']. "'");
